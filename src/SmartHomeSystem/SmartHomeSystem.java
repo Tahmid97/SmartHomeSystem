@@ -1,5 +1,7 @@
 package SmartHomeSystem;
 
+import CS2114.Window;
+
 /**
  * 
  * Description:
@@ -32,10 +34,13 @@ public class SmartHomeSystem {
     private Command command;
     private Register userAdd;
    
+    private Window homepage;
+    
     /**
      * Constructor
      */
     public SmartHomeSystem() {
+      
     }
     
     public void addUser() {
