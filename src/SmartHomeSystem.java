@@ -5,6 +5,7 @@ public class SmartHomeSystem {
         // TODO Auto-generated method stub
         System.out.println("Testing commit.");
         System.out.println("It works!");
+        System.out.println("Done.");
     }
 
 }
