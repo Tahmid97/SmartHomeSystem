@@ -1,4 +1,6 @@
 package SmartHomeSystem;
+import java.awt.Color;
+import CS2114.*;
 
 /**
  * The Device class handles all the information of an existing user's devices
@@ -23,12 +25,15 @@ public class Device {
     private String deviceType;
     private DeviceRole role;
     
+    private Shape icon;
+    
+    
     public Device(int deviceID, String deviceName) {
-        
+        this.deviceName = deviceName;
     }
     
     public String getDeviceName() {
-        return null;
+        return this.deviceName;
     }
     
     public int getDeviceID() {
@@ -63,4 +68,17 @@ public class Device {
         return null;
     }
     
+    public void createDeviceWindow(Shape shape) {
+        Window deviceWindow = new Window(deviceName);
+        deviceWindow.setSize(400, 400);
+        
+        Button quitButton = new Button("Quit"); 
+        deviceWindow.addButton(quitButton, WindowSide.SOUTH);
+    }
+    
+    public Shape makeDeviceIcon(int xMul, int yMul) { 
+        icon = new Shape(50 + 90*xMul, 270 + 90*yMul, 70, 70, Color.lightGray);
+        icon.onClick(this, "createDeviceWindow");
+        return icon;
+    }
 } //end Device

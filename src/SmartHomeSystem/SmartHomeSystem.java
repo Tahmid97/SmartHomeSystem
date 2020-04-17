@@ -1,6 +1,7 @@
 package SmartHomeSystem;
 
-import CS2114.Window;
+import java.awt.Color;
+import CS2114.*;
 
 /**
  * 
@@ -33,14 +34,20 @@ public class SmartHomeSystem {
     private Device device;
     private Command command;
     private Register userAdd;
-   
-    private Window homepage;
+    
+    private Window userDevice;
+    
+    public final int WINDOW_WIDTH = 450;
+    public final int WINDOW_HEIGHT = 650;
     
     /**
      * Constructor
      */
     public SmartHomeSystem() {
-      
+        userDevice = new Window("Smart Home System");
+        userDevice.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+        deviceManager = new DeviceManager();
+        username = "user001"; // Username will be pulled from login information
     }
     
     public void addUser() {
@@ -55,12 +62,30 @@ public class SmartHomeSystem {
         
     }
     
-    public void managerDevices() {
-        
+    public void manageDevices(Shape loginShape) {
+        deviceManager.createDeviceManagerPage(userDevice, this, username);
     }
     
     public void selectDeviceAndRunCommand(Device device, Command command) {
         
     }
-
+    
+    public void createEntryPage(Shape backButton) {
+        userDevice.removeAllShapes();
+        Shape signup = new Shape(50, 200, 350, 50, Color.orange);
+        Shape login = new Shape(50, 270, 350, 50, Color.orange);
+        login.onClick(this, "manageDevices");
+        
+        TextShape signupText = new TextShape(180, 220, "Sign Up");
+        
+        TextShape loginText = new TextShape(180, 290, "Log In");
+        loginText.onClick(this, "manageDevices");
+        
+        userDevice.addShape(signupText);
+        userDevice.addShape(loginText);
+        userDevice.addShape(signup);
+        userDevice.addShape(login);
+    }
+    
+    
 } //end SmartHomeSystem
