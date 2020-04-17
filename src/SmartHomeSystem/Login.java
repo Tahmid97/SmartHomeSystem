@@ -1,3 +1,5 @@
+package SmartHomeSystem;
+
 /**
  * The Login class acts as a gateway to the Smart Home System interface after
  * the user is authenticated with the correct username and password. The User

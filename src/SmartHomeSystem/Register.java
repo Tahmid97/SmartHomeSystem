@@ -1,3 +1,5 @@
+package SmartHomeSystem;
+
 /**
  * The Register class takes inputs such as username, first name, last name,
  * email, phone and password from the user in order to open a new account. The

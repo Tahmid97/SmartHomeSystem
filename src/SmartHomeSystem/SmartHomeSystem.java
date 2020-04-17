@@ -1,3 +1,5 @@
+package SmartHomeSystem;
+
 /**
  * 
  * Description:
@@ -29,12 +31,11 @@ public class SmartHomeSystem {
     private Device device;
     private Command command;
     private Register userAdd;
-    
+   
     /**
      * Constructor
      */
     public SmartHomeSystem() {
-        
     }
     
     public void addUser() {

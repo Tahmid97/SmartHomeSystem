@@ -1,3 +1,5 @@
+package SmartHomeSystem;
+
 import java.util.ArrayList;
 
 /** 

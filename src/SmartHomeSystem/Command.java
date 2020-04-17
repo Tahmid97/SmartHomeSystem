@@ -1,3 +1,5 @@
+package SmartHomeSystem;
+
 /**
  * The Command class handles the commands given by the user for the appropriate
  * devices. The class is responsible for turning devices on/off, and adjusting

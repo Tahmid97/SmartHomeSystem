@@ -1,3 +1,5 @@
+package SmartHomeSystem;
+
 /**
  * The Device class handles all the information of an existing user's devices
  * such as device name, device role, device type, and device ID. This class also

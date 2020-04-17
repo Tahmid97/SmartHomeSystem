@@ -1,3 +1,5 @@
+package SmartHomeSystem;
+
 /**
  * The UserProfile class handles all the information of an existing user such as
  * username, first name, last name. email, phone number, user ID and permission

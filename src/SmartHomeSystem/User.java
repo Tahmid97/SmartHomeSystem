@@ -1,3 +1,5 @@
+package SmartHomeSystem;
+
 /**
  * The User class is treated as the login/register interface to guide the users
  * in logging into their existing accounts or opening a new one. The Register
